@@ -1,6 +1,6 @@
 # CarStore Email Notification System
 
-A project for the Santander Coders 2023.2 course about automateing an email notification system for CarStore's new and best-selling vehicles, tailored to send personalized emails to clients on Mondays with JavaScript.
+A project for the Santander Coders 2023.2 course about automating an email notification system for CarStore's new and best-selling vehicles, tailored to send personalized emails to clients on Mondays with JavaScript.
 
 ## Usage
 
