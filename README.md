@@ -6,9 +6,6 @@ A project for the Santander Coders 2023.2 course about automating an email notif
 
 This project is designed to automatically send emails to clients who have opted to receive them. It checks if the current day is Monday and then sends out personalized emails to clients about new and best-selling vehicles at CarStore.
 
-enviarEmail(addressee, subject, body)
-This function sends emails based on the provided parameters. It performs checks for mandatory fields and logs the email content.
-
 | Function | Description |
 | --- | --- |
 | enviarEmail | This function sends emails based on the provided parameters. It performs checks for mandatory fields and logs the email content. |
