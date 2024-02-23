@@ -1,4 +1,4 @@
-// Base code for the activity
+// Base function for the activity
 const enviarEmail = (addressee, subject, body) => {
     if (!addressee) {
       return {
@@ -34,15 +34,15 @@ const enviarEmail = (addressee, subject, body) => {
         `
     );
   
-    return { status: "Sucess", message: "E-mail enviado com sucesso!" };
+    return { status: "Success", message: "E-mail enviado com sucesso!" };
   };
   
   module.exports = enviarEmail;
 
 /*
-    1.  Verify which day of the week it is and if it's a Monday
+    1.  Given a date, verify if it is a Monday. If no date is provided, check if the current day is a Monday
     2.  Build the email body
-    3.  Function to send email to a list if "recieveEmail" is true
+    3.  Function to send email to a list if "receiveEmail" is true
     4.  Handle the error or success response
 */
 
@@ -152,21 +152,14 @@ function sendEmailToClientList(clientsList, content, subject, date=new Date()){
             status: "Error",
             message: "E-mails só serão enviados às segundas-feiras."
         };
-
         handleEnviarEmail(response);
     }
     else{
-
         for(let i=0; i<clientsList.length; i++){
-
             let currentClient = clientsList[i];
-
             if(checkClient(currentClient)){
-
                 let currentEmailBody = createEmailBody(content, currentClient.name);
-
                 let response = enviarEmail(currentClient.addressee, subject, currentEmailBody);
-
                 handleEnviarEmail(response);
             }
         }
